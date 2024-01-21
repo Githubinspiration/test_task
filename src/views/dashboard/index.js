@@ -6,7 +6,7 @@ const Dashboard = () => {
     return (
         <>
             <div className="dash">
-                  <h1>Hello{name}</h1>
+                <h1>Hello{name}</h1>
             </div>
         </>
     )
