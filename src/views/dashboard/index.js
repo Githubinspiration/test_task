@@ -5,7 +5,9 @@ const Dashboard = () => {
     const name = useContext(Context);
     return (
         <>
-            <h1>Hello {name}</h1>
+            <div className="dash">
+                  <h1>Hello{name}</h1>
+            </div>
         </>
     )
 }

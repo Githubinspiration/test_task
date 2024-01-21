@@ -7,7 +7,7 @@ export const ContextProvider = ({ children }) => {
   return (
     <>
       <Context.Provider value={name}>
-        <div className="">
+        <div className="layout">
           {children}
         </div>
       </Context.Provider>
