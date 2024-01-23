@@ -37,6 +37,7 @@ export default function Navbar() {
           HR management
         </Typography>
       </div>
+      <hr className="my-2 border-blue-gray-50" />
       <List>
         <Accordion
           open={open === 1}
@@ -49,30 +50,30 @@ export default function Navbar() {
         >
           <ListItem className={`p-0 hover:bg-[#f5f6f7] rounded-[10px]  ${open === 1 ? "bg-[#f5f6f7]" : ""}`} selected={open === 1}>
             <AccordionHeader onClick={() => handleOpen(1)} className={`border-b-0 p-3`}>
-              <ListItemPrefix>
+              <ListItemPrefix className="mr-4">
                 <PresentationChartBarIcon className="h-5 w-5" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
-                Dashboard
+                <div>Dashboard</div>
               </Typography>
             </AccordionHeader>
           </ListItem>
           <AccordionBody className={`py-1 ${open === 1 ? "" : "hidden"}`}>
             <List className="p-0">
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
-                <ListItemPrefix>
+                <ListItemPrefix className="mr-4">
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Analytics
               </ListItem>
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
-                <ListItemPrefix>
+                <ListItemPrefix className="mr-4">
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Reporting
               </ListItem>
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
-                <ListItemPrefix>
+                <ListItemPrefix className="mr-4">
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Projects
@@ -91,7 +92,7 @@ export default function Navbar() {
         >
           <ListItem className={`p-0 rounded-[10px] hover:bg-[#f5f6f7] `} selected={open === 2}>
             <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
-              <ListItemPrefix className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
+              <ListItemPrefix className="mr-4">
                 <ShoppingBagIcon className="h-5 w-5" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
@@ -102,13 +103,13 @@ export default function Navbar() {
           <AccordionBody className={`py-1 ${open === 2 ? "" : "hidden"}`}>
             <List className="p-0">
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
-                <ListItemPrefix>
+                <ListItemPrefix className="mr-4">
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Orders
               </ListItem>
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
-                <ListItemPrefix>
+                <ListItemPrefix className="mr-4">
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Products
@@ -118,7 +119,7 @@ export default function Navbar() {
         </Accordion>
         <hr className="my-2 border-blue-gray-50" />
         <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
-          <ListItemPrefix>
+          <ListItemPrefix className="mr-4">
             <InboxIcon className="h-5 w-5" />
           </ListItemPrefix>
           Inbox
@@ -127,13 +128,13 @@ export default function Navbar() {
           </ListItemSuffix>
         </ListItem>
         <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
-          <ListItemPrefix>
+          <ListItemPrefix className="mr-4">
             <UserCircleIcon className="h-5 w-5" />
           </ListItemPrefix>
           Profile
         </ListItem>
         <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
-          <ListItemPrefix>
+          <ListItemPrefix className="mr-4">
             <Cog6ToothIcon className="h-5 w-5" />
           </ListItemPrefix>
           Settings
