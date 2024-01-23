@@ -4,7 +4,7 @@ const Dashboard = lazy(() => import("../views/dashboard"));
 
 const PublicRoutes = () => (
   <>
-    <Dashboard />
+    {/* <Dashboard /> */}
   </>
 );
 

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
+    "@material-tailwind/react": "^2.1.8",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -42,6 +44,7 @@
     "postcss-loader": "^8.0.0",
     "resolve-url-loader": "^5.0.0",
     "sass-loader": "^14.0.0",
-    "style-loader": "^3.3.4"
+    "style-loader": "^3.3.4",
+    "tailwindcss": "^3.4.1"
   }
 }

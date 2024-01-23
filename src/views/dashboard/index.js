@@ -19,7 +19,7 @@ const Dashboard = () => {
     }
     return (
         <>
-            <div className="dash">
+            <div className="">
                 <div className="button">
                     <ButtonGen BTName={"Day"} onClick={day_click} btnFlag={true} />
                     <ButtonGen BTName={"Week"} onClick={week_click} btnFlag={true} />
