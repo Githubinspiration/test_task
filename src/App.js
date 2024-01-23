@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 
 //import scss file
-import "./dashbord.scss";
+// import "./dashbord.scss";
 
 function App() {
   return (
