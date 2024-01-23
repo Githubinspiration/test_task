@@ -7,7 +7,7 @@ export const ContextProvider = ({ children }) => {
   return (
     <>
       <Context.Provider value={name}>
-        <div className="flex">
+        <div className="flex gap-2">
           {children}
         </div>
       </Context.Provider>
