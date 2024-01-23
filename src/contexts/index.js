@@ -7,7 +7,7 @@ export const ContextProvider = ({ children }) => {
   return (
     <>
       <Context.Provider value={name}>
-        <div className="layout">
+        <div className="flex">
           {children}
         </div>
       </Context.Provider>

@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import {
   Card,
   Typography,
@@ -22,17 +22,19 @@ import {
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
  
 export default function Navbar() {
-  const [open, setOpen] = React.useState(0);
+  const [open, setOpen] = useState(0);
  
   const handleOpen = (value) => {
-    setOpen(open === value ? 0 : value);
+      setOpen(open === value ? 0 : value);
+      console.log(open);
   };
  
   return (
-    <Card className="h-[calc(100vh-2rem)] flex flex-col w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+    // <Card className="h-[calc(100vh-2rem)] flex flex-col w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+    <Card className=" h-[100vh] flex flex-col w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
       <div className="mb-2 p-4">
         <Typography variant="h5" color="blue-gray">
-          Sidebar
+          HR management
         </Typography>
       </div>
       <List>
@@ -45,8 +47,8 @@ export default function Navbar() {
             />
           }
         >
-          <ListItem className="p-0" selected={open === 1}>
-            <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
+          <ListItem className={`p-0 hover:bg-[#f5f6f7] rounded-[10px]  ${open === 1 ? "bg-[#f5f6f7]" : ""}`} selected={open === 1}>
+            <AccordionHeader onClick={() => handleOpen(1)} className={`border-b-0 p-3`}>
               <ListItemPrefix>
                 <PresentationChartBarIcon className="h-5 w-5" />
               </ListItemPrefix>
@@ -55,21 +57,21 @@ export default function Navbar() {
               </Typography>
             </AccordionHeader>
           </ListItem>
-          <AccordionBody className="py-1">
+          <AccordionBody className={`py-1 ${open === 1 ? "" : "hidden"}`}>
             <List className="p-0">
-              <ListItem>
+              <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix>
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Analytics
               </ListItem>
-              <ListItem>
+              <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix>
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Reporting
               </ListItem>
-              <ListItem>
+              <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix>
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
@@ -87,9 +89,9 @@ export default function Navbar() {
             />
           }
         >
-          <ListItem className="p-0" selected={open === 2}>
+          <ListItem className={`p-0 rounded-[10px] hover:bg-[#f5f6f7] `} selected={open === 2}>
             <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
-              <ListItemPrefix>
+              <ListItemPrefix className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ShoppingBagIcon className="h-5 w-5" />
               </ListItemPrefix>
               <Typography color="blue-gray" className="mr-auto font-normal">
@@ -97,15 +99,15 @@ export default function Navbar() {
               </Typography>
             </AccordionHeader>
           </ListItem>
-          <AccordionBody className="py-1">
+          <AccordionBody className={`py-1 ${open === 2 ? "" : "hidden"}`}>
             <List className="p-0">
-              <ListItem>
+              <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix>
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
                 Orders
               </ListItem>
-              <ListItem>
+              <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix>
                   <ChevronRightIcon strokeWidth={3} className="h-3 w-5" />
                 </ListItemPrefix>
@@ -115,7 +117,7 @@ export default function Navbar() {
           </AccordionBody>
         </Accordion>
         <hr className="my-2 border-blue-gray-50" />
-        <ListItem>
+        <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
           <ListItemPrefix>
             <InboxIcon className="h-5 w-5" />
           </ListItemPrefix>
@@ -124,19 +126,19 @@ export default function Navbar() {
             <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />
           </ListItemSuffix>
         </ListItem>
-        <ListItem>
+        <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
           <ListItemPrefix>
             <UserCircleIcon className="h-5 w-5" />
           </ListItemPrefix>
           Profile
         </ListItem>
-        <ListItem>
+        <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
           <ListItemPrefix>
             <Cog6ToothIcon className="h-5 w-5" />
           </ListItemPrefix>
           Settings
         </ListItem>
-        <ListItem>
+        <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
           <ListItemPrefix>
             <PowerIcon className="h-5 w-5" />
           </ListItemPrefix>

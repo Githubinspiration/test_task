@@ -11,9 +11,9 @@ function App() {
   return (
     <ContextProvider>
       <Navbar />
-      <Router>
+      {/* <Router>
         <AppRoutes />
-      </Router>
+      </Router> */}
     </ContextProvider>
   );
 }
