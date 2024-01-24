@@ -21,7 +21,7 @@ import {
 // } from "@heroicons/react/24/solid";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 
-export default function Navbar() {
+export default function Sidebar() {
   const [open, setOpen] = useState(0);
 
   const handleOpen = (value) => {
