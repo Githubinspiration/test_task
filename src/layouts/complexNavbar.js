@@ -10,6 +10,8 @@ import {
   MenuList,
   MenuItem,
   Avatar,
+  Badge,
+  IconButton,
 } from "@material-tailwind/react";
 import {
   UserCircleIcon,
@@ -18,6 +20,8 @@ import {
   InboxArrowDownIcon,
   LifebuoyIcon,
   PowerIcon,
+  BellIcon,
+  HomeIcon,
 } from "@heroicons/react/24/solid";
 
 // profile menu component
@@ -64,9 +68,7 @@ function ProfileMenu() {
             className="border border-gray-900 p-0.5 w-9 h-9 rounded-full"
             src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
           />
-          <Button size="sm" variant="text">
-            <span>Log In</span>
-          </Button>
+          <span className="text-sm">Log In</span>
           <ChevronDownIcon
             strokeWidth={2.5}
             className={`h-3 w-3 transition-transform ${
@@ -108,6 +110,14 @@ function ProfileMenu() {
   );
 }
 
+function BadgeOverlap() {
+  return (
+    <Button className="">
+      <BellIcon strokeWidth={10} className="h-5 w-5 "></BellIcon>
+    </Button>
+  );
+}
+
 export default function ComplexNavbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -121,17 +131,20 @@ export default function ComplexNavbar() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6">
-      <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
-        >
-          Dashboard
-        </Typography>
-        <ProfileMenu />
-      </div>
-    </Navbar>
+    <div className="m-auto">
+      <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6 fixed">
+        <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
+          <Typography
+            as="a"
+            href="#"
+            className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+          >
+            Dashboard
+          </Typography>
+          <BadgeOverlap />
+          <ProfileMenu />
+        </div>
+      </Navbar>
+    </div>
   );
 }
