@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, createElement, useEffect } from "react";
 
 import {
@@ -131,20 +130,18 @@ export default function ComplexNavbar() {
   }, []);
 
   return (
-    <div className="m-auto">
-      <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6 fixed">
-        <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
-          >
-            Dashboard
-          </Typography>
-          <BadgeOverlap />
-          <ProfileMenu />
-        </div>
-      </Navbar>
-    </div>
+    <Navbar className="mx-auto max-w-screen-xl p-2 lg:rounded-full lg:pl-6 top-[30px] fixed">
+      <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
+        <Typography
+          as="a"
+          href="#"
+          className="mr-4 ml-2 cursor-pointer py-1.5 font-medium"
+        >
+          Dashboard
+        </Typography>
+        <BadgeOverlap />
+        <ProfileMenu />
+      </div>
+    </Navbar>
   );
 }

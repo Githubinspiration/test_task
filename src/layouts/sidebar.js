@@ -30,7 +30,7 @@ export default function Sidebar() {
   };
 
   return (
-    <Card className=" h-[100vh] flex flex-col w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+    <Card className=" h-[100vh] flex flex-col w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 fixed">
       <div className="mb-2 p-4">
         <Typography variant="h5" color="blue-gray">
           HR management
