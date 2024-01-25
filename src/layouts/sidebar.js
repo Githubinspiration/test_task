@@ -30,7 +30,7 @@ export default function Sidebar() {
   };
 
   return (
-    <Card className=" h-[100vh] flex flex-col w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 fixed">
+    <Card className=" h-[100vh] flex flex-col w-full max-w-[20rem] p-4 shadow-xl bg-white fixed z-50">
       <div className="mb-2 p-4">
         <Typography variant="h5" color="blue-gray">
           HR management
@@ -145,7 +145,9 @@ export default function Sidebar() {
               </Typography>
             </AccordionHeader>
           </ListItem>
-          <AccordionBody className={`py-1 ml-[10px] ${open === 1 ? "" : "hidden"}`}>
+          <AccordionBody
+            className={`py-1 ml-[10px] ${open === 1 ? "" : "hidden"}`}
+          >
             <List className="p-0">
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix className="mr-4">
@@ -234,7 +236,9 @@ export default function Sidebar() {
               </Typography>
             </AccordionHeader>
           </ListItem>
-          <AccordionBody className={`py-1 ml-[10px] ${open === 2 ? "" : "hidden"}`}>
+          <AccordionBody
+            className={`py-1 ml-[10px] ${open === 2 ? "" : "hidden"}`}
+          >
             <List className="p-0">
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix className="mr-4">
@@ -344,7 +348,9 @@ export default function Sidebar() {
               </Typography>
             </AccordionHeader>
           </ListItem>
-          <AccordionBody className={`py-1 ml-[10px] ${open === 3 ? "" : "hidden"}`}>
+          <AccordionBody
+            className={`py-1 ml-[10px] ${open === 3 ? "" : "hidden"}`}
+          >
             <List className="p-0">
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix className="mr-4">
@@ -412,7 +418,9 @@ export default function Sidebar() {
               </Typography>
             </AccordionHeader>
           </ListItem>
-          <AccordionBody className={`py-1 ml-[10px] ${open === 4 ? "" : "hidden"}`}>
+          <AccordionBody
+            className={`py-1 ml-[10px] ${open === 4 ? "" : "hidden"}`}
+          >
             <List className="p-0">
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix className="mr-4">
@@ -506,7 +514,9 @@ export default function Sidebar() {
               </Typography>
             </AccordionHeader>
           </ListItem>
-          <AccordionBody className={`py-1 ml-[10px] ${open === 5 ? "" : "hidden"}`}>
+          <AccordionBody
+            className={`py-1 ml-[10px] ${open === 5 ? "" : "hidden"}`}
+          >
             <List className="p-0">
               <ListItem className={`rounded-[10px] hover:bg-[#f5f6f7] `}>
                 <ListItemPrefix className="mr-4">
