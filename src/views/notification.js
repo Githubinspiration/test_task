@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { alpha } from '@mui/material/styles';
@@ -123,15 +122,15 @@ const headCells = [
 ];
 
 function EnhancedTableHead(props) {
-  const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
+  const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort, classname } =
     props;
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };
 
   return (
-    <TableHead>
-      <TableRow className='sticky'>
+    <TableHead className={classname}>
+      <TableRow>
         <TableCell padding="checkbox">
           <Checkbox
             color="primary"
@@ -176,6 +175,7 @@ EnhancedTableHead.propTypes = {
   order: PropTypes.oneOf(['asc', 'desc']).isRequired,
   orderBy: PropTypes.string.isRequired,
   rowCount: PropTypes.number.isRequired,
+  classname: PropTypes.string.isRequired,
 };
 
 function EnhancedTableToolbar(props) {
@@ -320,6 +320,7 @@ export default function Notification() {
               onSelectAllClick={handleSelectAllClick}
               onRequestSort={handleRequestSort}
               rowCount={rows.length}
+              classname={'fixed top-0'}
             />
             <TableBody>
               {visibleRows.map((row, index) => {

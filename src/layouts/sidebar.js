@@ -5,8 +5,8 @@ import {
   List,
   ListItem,
   ListItemPrefix,
-  ListItemSuffix,
-  Chip,
+  // ListItemSuffix,
+  // Chip,
   Accordion,
   AccordionHeader,
   AccordionBody,
@@ -19,7 +19,8 @@ import {
 //   InboxIcon,
 //   PowerIcon,
 // } from "@heroicons/react/24/solid";
-import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+// import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(0);

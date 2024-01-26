@@ -11,7 +11,7 @@ const Dashboard = () => {
         <div className="w-full fixed pl-[320px] top-[30px] left-0">
           <ComplexNavbar />
         </div>
-        <div className="w-100% h-screen px-[15px] pb-[15px] pt-[100px]">
+        <div className="w-100% h-screen px-[15px] pb-[15px] pt-[100px] overflow-auto">
             <Notification />
         </div>
         <div className="w-100% h-screen px-[15px] pb-[15px] pt-[100px]">
