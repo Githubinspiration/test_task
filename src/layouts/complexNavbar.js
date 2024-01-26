@@ -9,8 +9,8 @@ import {
   MenuList,
   MenuItem,
   Avatar,
-  Badge,
-  IconButton,
+  // Badge,
+  // IconButton,
 } from "@material-tailwind/react";
 import {
   UserCircleIcon,
@@ -20,7 +20,7 @@ import {
   LifebuoyIcon,
   PowerIcon,
   BellIcon,
-  HomeIcon,
+  // HomeIcon,
 } from "@heroicons/react/24/solid";
 
 // profile menu component
@@ -120,7 +120,7 @@ function BadgeOverlap() {
 export default function ComplexNavbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
+  // const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
   useEffect(() => {
     window.addEventListener(
@@ -130,7 +130,7 @@ export default function ComplexNavbar() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-xl p-2 lg:rounded-full lg:pl-6 top-[30px] fixed">
+    <Navbar className="mx-auto max-w-7xl p-2 lg:rounded-full lg:pl-6">
       <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
