@@ -48,6 +48,13 @@ const rows = [
   createData(11, 'Marshmallow', 318, 0, 81, 2.0),
   createData(12, 'Nougat', 360, 19.0, 9, 37.0),
   createData(13, 'Oreo', 437, 18.0, 63, 4.0),
+  createData(14, 'Lollipop', 392, 0.2, 98, 0.0),
+  createData(15, 'Marshmallow', 318, 0, 81, 2.0),
+  createData(16, 'Nougat', 360, 19.0, 9, 37.0),
+  createData(17, 'Oreo', 437, 18.0, 63, 4.0),
+  createData(18, 'Oreo', 437, 18.0, 63, 4.0),
+  createData(19, 'Oreo', 437, 18.0, 63, 4.0),
+  createData(20, 'Oreo', 437, 18.0, 63, 4.0),
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -124,7 +131,7 @@ function EnhancedTableHead(props) {
 
   return (
     <TableHead>
-      <TableRow>
+      <TableRow className='sticky'>
         <TableCell padding="checkbox">
           <Checkbox
             color="primary"
